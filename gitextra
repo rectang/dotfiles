@@ -1,0 +1,8 @@
+[user]
+    name = Marvin Humphrey
+    email = marvin@rectangular.com
+[core]
+    pager = cat
+[color]
+    ui = true
+
