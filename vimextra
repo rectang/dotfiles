@@ -1,0 +1,107 @@
+" Vim not vi.
+set nocompatible
+
+" Show syntax highlighting.
+syntax enable
+
+" Use filetype-specific indentation, via $DIR/indent/$FILETYPE.vim
+"filetype plugin indent on
+
+" Use smartindent.
+set smartindent
+
+" Show line numbers.
+set number
+
+" Choose syntax colors that work well on a light background.
+set bg=light
+
+" Allow backspacing over anything.
+set backspace=indent,eol,start
+
+" Case-insensitive regexes.
+set ignorecase
+
+" Wrap long lines.
+set wrap
+
+" <tab> autocompletion of directories.
+set wildchar=<tab>
+
+" Highlight matches after a search.
+set hlsearch
+
+" Incremental search -- start as soon as the first character is typed.
+set incsearch
+
+" Highlight matching brackets as the cursor passes over them.
+set showmatch
+
+" Always show the status bar at the bottom of the screen.
+set laststatus=2
+
+" Show line, column, %-complete stats in status bar.
+set ruler
+
+" Set the font used by gvim (Mac OS X only);
+set guifont=Menlo:h13
+
+" Automatically recognize .pm, .plx, .t files as perl
+autocmd BufNewFile,BufRead *.plx set filetype=perl
+autocmd BufNewFile,BufRead *.pm set filetype=perl
+autocmd BufNewFile,BufRead *.t set filetype=perl
+
+" Use "visual bell" instead of the annoying "audio blink".
+set vb
+
+" Make the backspace key behave the same across different terminals.
+set t_kb=ctrl-vBACKSPACE
+
+" Set t_kD (the delete key) to the value of t_kb so that delete and backspace
+" work the same.
+fixdel 
+
+" Allow cursor keys plus h, l to wrap when used at the beginning or end of a line.
+" <> are cursor keys in normal and visual mode.
+" [] are cursor keys in insert mode.
+set whichwrap=b,s,<,>,[,],h,l
+
+" Make backspace treat 4 spaces as a tab.
+set softtabstop=4
+
+" Have <tab> key type spaces.
+set expandtab
+
+" Disable expandtab for Makefiles.
+autocmd FileType make setlocal noexpandtab
+
+" Display tabs as four spaces
+set tabstop=4
+
+" Have automatic indentation work like tabs.
+set shiftwidth=4
+
+" Wrap lines at 78 characters.
+set textwidth=78
+
+" Use a narrower width for commit messages so that `git log` looks good.
+autocmd FileType gitcommit,svn setlocal textwidth=72
+
+" Use 2-space indent for HTML, Java, Ruby.
+autocmd FileType html,java,ruby setlocal shiftwidth=2
+autocmd FileType html,java,ruby setlocal softtabstop=2
+autocmd FileType html,java,ruby setlocal tabstop=2
+
+" Default to UTF-8.
+set encoding=utf-8
+
+" Set up shortcuts for common Greek letters.
+inoremap <M-a> α
+inoremap <M-b> β
+inoremap <M-d> δ
+inoremap <M-e> ε
+inoremap <M-p> π
+inoremap <M-t> θ
+inoremap <M-z> ω
+inoremap <M-S> Σ
+
