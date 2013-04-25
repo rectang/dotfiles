@@ -56,6 +56,9 @@ autocmd BufNewFile,BufRead *.mdtext set filetype=markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.mdown set filetype=markdown
 
+" Recognize .cfh as Clownfish
+autocmd BufNewFile,BufRead *.cfh set filetype=clownfish
+
 " Use "visual bell" instead of the annoying "audio blink".
 set vb
 
