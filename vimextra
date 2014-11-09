@@ -59,6 +59,9 @@ autocmd BufNewFile,BufRead *.mdown set filetype=markdown
 " Recognize .cfh as Clownfish
 autocmd BufNewFile,BufRead *.cfh set filetype=clownfish
 
+" Recognize .go as Go.
+autocmd BufNewFile,BufRead *.go set filetype=go
+
 " Use "visual bell" instead of the annoying "audio blink".
 set vb
 
@@ -80,8 +83,9 @@ set softtabstop=4
 " Have <tab> key type spaces.
 set expandtab
 
-" Disable expandtab for Makefiles.
+" Disable expandtab for Makefiles and Go files.
 autocmd FileType make setlocal noexpandtab
+autocmd FileType go setlocal noexpandtab
 
 " Display tabs as four spaces
 set tabstop=4
