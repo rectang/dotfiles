@@ -3,6 +3,7 @@
     email = marvin@rectangular.com
 [core]
     pager = cat
+    editor = vim
 [color]
     ui = true
 [alias]
