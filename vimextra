@@ -117,3 +117,13 @@ inoremap <M-t> θ
 inoremap <M-z> ω
 inoremap <M-S> Σ
 
+" Remap movement keys to a more ergonomic 'inverted-T' configuration.  Then
+" set `e` and `E` to enter insertion mode (think 'edit') since `i` has been
+" used for movement.
+noremap i <Up>
+noremap j <Left>
+noremap k <Down>
+noremap l <Right>
+noremap e <insert>
+noremap E ^<insert>
+
