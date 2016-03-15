@@ -126,4 +126,6 @@ noremap k <Down>
 noremap l <Right>
 noremap e <insert>
 noremap E ^<insert>
+noremap h b
+noremap ; w
 
