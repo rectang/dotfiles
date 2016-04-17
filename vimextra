@@ -46,6 +46,9 @@ set ruler
 " Set the font used by gvim (Mac OS X only);
 set guifont=Menlo:h13
 
+" Recognize .rs as Rust.
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
 " Automatically recognize .pm, .plx, .t files as perl
 autocmd BufNewFile,BufRead *.plx set filetype=perl
 autocmd BufNewFile,BufRead *.pm set filetype=perl
