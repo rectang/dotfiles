@@ -1,0 +1,70 @@
+# Thwart perltidy from vertically aligning assignments, list elements, and so
+# on.  Vertical alignment is one of perltidy's most distinctive features,
+# though not everyone loves it.  (Python PEP 8 explicitly forbids "More than
+# one space around an assignment (or other) operator to align it with
+# another.")  The primary reason we choose to disable vertical alignment is
+# that it makes for cleaner version control history: lines are more
+# independent, so they are less likely to end up in a diff merely because a
+# nearby line was changed.
+--no-valign
+
+# Allow longer line lengths than the default 80 to reduce fragmented lines
+# under deep nesting, but don't take it too far.
+--maximum-line-length=100
+
+# Use the default value of 2 columns for continuation indentation.  This is
+# somewhat aggressive in that it will often cause reformatting of code
+# produced manually in editors with tabstops set to 4, but the results are
+# generally an improvement.  A value of 4 for continuation indentation results
+# in less reformatting, but at the expense of occasional poor decisions by
+# perltidy.
+--continuation-indentation=2 # default
+
+# Use the defaults for spacing around square brackets and curly braces.
+# However, use a tighter fit around parentheses, which are more common.
+--paren-tightness=2 # The default value of 1 is also pretty good.
+--brace-tightness=1 # default
+--square-bracket-tightness=1 # default
+--block-brace-tightness=1 # default
+
+# Match the indentation of a closing paren, bracket, or brace to the
+# indentation of the line of the corresponding opening paren, bracket, or
+# brace.
+--vertical-tightness-closing=0 # default
+--closing-token-indentation=0 # default
+
+# Use the default for vertical tightness.  This parameter has limited effect
+# with --no-valign enabled, though.
+--vertical-tightness=0 # default
+
+# Follow the Perl Best Practices recommendation for breaking before operators
+# because it makes it clear that a line is a continuation.
+--want-break-before="% + - * / x != == >= <= =~ !~ < > | & = **= += *= &= <<= &&= -= /= |= >>= ||= //= .= %= ^= x="
+
+# Thwart perltidy from overriding programmer choice in how arguments are
+# grouped across multiple lines.
+--break-at-old-comma-breakpoints
+
+# Thwart perltidy from inserting spaces around semicolons in `for` loop
+# conditionals.
+--no-space-for-semicolon
+
+# Thwart perltidy from outdenting anything, because outdenting is always
+# awful.
+--no-outdent-long-quotes
+--no-outdent-long-comments
+--no-outdent-labels
+
+# Thwart perltidy from forcing extra lines before comments, subroutines and
+# packages.
+--noblanks-before-comments 
+--noblanks-before-subs 
+--blank-lines-before-packages=0
+
+# Thwart perltidy from inserting extra whitespace before hanging comments on
+# the right.
+--minimum-space-to-comment=1
+
+# Make it very, very likely that perltidy will converge on output.
+--iterations=2
+
