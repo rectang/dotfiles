@@ -110,16 +110,6 @@ autocmd FileType html,javascript,java,ruby setlocal tabstop=2
 " Default to UTF-8.
 set encoding=utf-8
 
-" Set up shortcuts for common Greek letters.
-inoremap <M-a> α
-inoremap <M-b> β
-inoremap <M-d> δ
-inoremap <M-e> ε
-inoremap <M-p> π
-inoremap <M-t> θ
-inoremap <M-z> ω
-inoremap <M-S> Σ
-
 " Remap movement keys to a more ergonomic 'inverted-T' configuration.  Then
 " set `e` and `E` to enter insertion mode (think 'edit') since `i` has been
 " used for movement.
