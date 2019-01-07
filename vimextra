@@ -122,3 +122,6 @@ noremap E ^<insert>
 noremap h b
 noremap ; w
 
+" Make carat easier to type.
+inoremap <C-a> ^
+
