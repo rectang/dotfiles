@@ -125,3 +125,10 @@ noremap ; w
 " Make carat easier to type.
 inoremap <C-a> ^
 
+" Remove the touchbar menu, especially the full-page key which I always hit
+" accidentally because it's next to the <ESCAPE> key.
+let g:macvim_default_touchbar_fullscreen=0
+if has("gui_macvim")
+  " Remove Vim buttons from the Touch Bar.
+  aunmenu TouchBar.
+endif
