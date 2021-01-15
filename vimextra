@@ -102,10 +102,10 @@ set textwidth=78
 " Use a narrower width for commit messages so that `git log` looks good.
 autocmd FileType gitcommit,svn setlocal textwidth=72
 
-" Use 2-space indent for HTML, JavaScript, Java, Ruby.
-autocmd FileType html,javascript,java,ruby setlocal shiftwidth=2
-autocmd FileType html,javascript,java,ruby setlocal softtabstop=2
-autocmd FileType html,javascript,java,ruby setlocal tabstop=2
+" Use 2-space indent for HTML, XML, SVG, CSS, JavaScript, Java, Ruby.
+autocmd FileType html,xml,svg,css,javascript,java,ruby setlocal shiftwidth=2
+autocmd FileType html,xml,svg,css,javascript,java,ruby setlocal softtabstop=2
+autocmd FileType html,xml,svg,css,javascript,java,ruby setlocal tabstop=2
 
 " Default to UTF-8.
 set encoding=utf-8
