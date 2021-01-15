@@ -132,3 +132,19 @@ if has("gui_macvim")
   " Remove Vim buttons from the Touch Bar.
   aunmenu TouchBar.
 endif
+
+" Allow for per-repository vimrc files.
+"
+" If we're in a git repository, AND there is a file named `.marvimrc` in
+" the root directory of the repository, AND that file is not committed,
+" then it must be a vimrc file that I put there and it's safe to load.
+let git_path = system("git rev-parse --show-toplevel 2>/dev/null")
+if !empty(git_path)
+    let marvimrc = substitute(git_path, '\n', '', '') . "/.marvimrc"
+    if !empty(glob(marvimrc))
+        let marvimrc_log = system("git log " . marvimrc)
+        if empty(marvimrc_log)
+            exec ":source " . marvimrc
+        endif
+    endif
+endif
