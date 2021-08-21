@@ -1,6 +1,5 @@
 [user]
-    name = Marvin Humphrey
-    email = marvin@rectangular.com
+	useConfigOnly = true
 [core]
     pager = cat
     editor = vim
