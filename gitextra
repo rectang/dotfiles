@@ -12,3 +12,5 @@
 	ff = no
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
