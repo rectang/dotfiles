@@ -8,4 +8,7 @@
     ui = true
 [alias]
     slog = log --pretty=tformat:\"%h %ad %<(16,trunc)%aN %s\" --date=short --graph
-
+[merge]
+	ff = no
+[pull]
+	ff = only
