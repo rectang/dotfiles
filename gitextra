@@ -6,7 +6,8 @@
 [color]
     ui = true
 [alias]
-    slog = log --pretty=tformat:\"%h %ad %<(16,trunc)%aN %s\" --date=short --graph
+    slog = log --pretty=tformat:'%C(bold blue)%h %C(bold red)%ad %C(bold blue)%aN%C(auto)%d %<|(100,trunc)%s%C(reset)' --date=short --graph
+    wiff = diff --word-diff=color
 [merge]
 	ff = no
 [pull]
