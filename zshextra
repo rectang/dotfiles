@@ -2,3 +2,6 @@ export PROMPT='%n@%m:%~ %# '
 export EDITOR='vim'
 export PATH=~/bin:$PATH
 alias vsedit='open -a /Applications/Visual\ Studio\ Code.app'
+
+# Enable Git autocompletion.
+autoload -Uz compinit && compinit
