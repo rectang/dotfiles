@@ -73,7 +73,9 @@ set t_kb=ctrl-vBACKSPACE
 
 " Set t_kD (the delete key) to the value of t_kb so that delete and backspace
 " work the same.
-fixdel 
+if !has('nvim')
+    fixdel
+endif
 
 " Allow cursor keys plus h, l to wrap when used at the beginning or end of a line.
 " <> are cursor keys in normal and visual mode.
