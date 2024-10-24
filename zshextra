@@ -5,3 +5,6 @@ alias vsedit='open -a /Applications/Visual\ Studio\ Code.app'
 
 # Enable Git autocompletion.
 autoload -Uz compinit && compinit
+
+# Set tabstop of terminal to 4.
+tabs -4
