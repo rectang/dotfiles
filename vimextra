@@ -101,6 +101,11 @@ set shiftwidth=4
 " Wrap lines at 78 characters.
 set textwidth=78
 
+" Set GUI window width to the textwidth plus 4 to accommodate line numbers.
+if has("gui_running")
+    set columns=82
+endif
+
 " Use a narrower width for commit messages so that `git log` looks good.
 autocmd FileType gitcommit,svn setlocal textwidth=72
 
